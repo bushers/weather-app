@@ -2,8 +2,10 @@ import React from 'react'
 
 const ForcastDisplay = (props) => (
   <div>
-    <button>Current Forcast</button>
-    <button>5 Day Forcast</button>
+    Forcast Display
+    <button onClick={props.handleClick} name='back'>
+      Back
+    </button>
   </div>
 )
 
