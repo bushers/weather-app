@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ForcastDisplay = (props) => (
+const ForecastDisplay = (props) => (
   <div>
     Forcast Display
     <button onClick={props.handleClick} name='back'>
@@ -9,4 +9,4 @@ const ForcastDisplay = (props) => (
   </div>
 )
 
-export default ForcastDisplay
+export default ForecastDisplay
