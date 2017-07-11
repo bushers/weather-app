@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SelectForecast from './SelectForecast'
 import ForecastDisplay from './ForecastDisplay'
 import Input from './Input'
+import { StyleSheet, css } from 'aphrodite'
 
 class App extends Component {
   state = {
@@ -36,19 +37,23 @@ class App extends Component {
     window.fetch(apiCall)
       .then(response => response.json())
       .then(data => {
-        this.setState({ forcastData: data.name })
-        console.log(data)
+        if (data.cod === '404') {
+          console.log('City not found. Please try again.')
+        } else {
+          this.setState({ forecastData: data })
+          console.log(data)
+        }
       })
       .catch(err => console.log(`There was an error ${err}`))
   }
 
   render () {
     return (
-      <div className='container' style={{textAlign: 'center'}}>
-        <div>Weather App</div>
+      <div className={css(styles.wrapper)}>
+        <h1 className={css(styles.title)}>Weather App</h1>
         {this.state.forecastType ? (
           <div>
-            <ForecastDisplay handleClick={this.forecastTypeBtnClick} />
+            <ForecastDisplay data={this.state.forecastData} handleClick={this.forecastTypeBtnClick} />
             <Input
               userInput={this.state.userInput}
               handleSubmit={this.onSubmit}
@@ -63,3 +68,17 @@ class App extends Component {
 }
 
 export default App
+
+const styles = StyleSheet.create({
+  wrapper: {
+    maxWidth: '580px',
+    margin: '2em auto',
+    padding: '2em 1em',
+    textAlign: 'center',
+    border: '1px solid black'
+  },
+  title: {
+    fontSize: '2em',
+    fontWeight: 'bold'
+  }
+})
