@@ -1,10 +1,16 @@
 import React from 'react'
+import { StyleSheet, css } from 'aphrodite'
 
 const ForecastDisplay = (props) => (
-  <div>
-    <h3>Forecast Display</h3>
+  <div className={css(styles.wrapper)}>
     {props.data ? (
-      <div>{props.data.weather[0].main}</div>
+      <div>
+        <p>The current forecast for {props.data.name} is:</p>
+        <img src={`http://openweathermap.org/img/w/${props.data.weather[0].icon}.png`} />
+        <h3>{props.data.weather[0].main}</h3>
+        <p>{props.data.weather[0].description}</p>
+        <p>Temperature {(props.data.main.temp - 273.15).toFixed(2)} C, {((props.data.main.temp - 273.15) * 9 / 5 + 32).toFixed(2)} F</p>
+      </div>
     ) : (
       <div>No city selected</div>
       )}
@@ -15,3 +21,7 @@ const ForecastDisplay = (props) => (
 )
 
 export default ForecastDisplay
+
+const styles = StyleSheet.create({
+  padding: '1em 0'
+})

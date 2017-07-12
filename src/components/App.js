@@ -13,7 +13,10 @@ class App extends Component {
 
   forecastTypeBtnClick = (e) => {
     if (this.state.forecastType) {
-      this.setState({ forecastType: null })
+      this.setState({
+        forecastType: null,
+        forecastData: null
+      })
     } else {
       this.setState({ forecastType: e.target.name })
     }
@@ -38,10 +41,9 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         if (data.cod === '404') {
-          console.log('City not found. Please try again.')
+          window.alert('City not found. Please try again.')
         } else {
           this.setState({ forecastData: data })
-          console.log(data)
         }
       })
       .catch(err => console.log(`There was an error ${err}`))
