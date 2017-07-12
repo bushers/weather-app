@@ -55,7 +55,10 @@ class App extends Component {
         <h1 className={css(styles.title)}>Weather App</h1>
         {this.state.forecastType ? (
           <div>
-            <ForecastDisplay data={this.state.forecastData} handleClick={this.forecastTypeBtnClick} />
+            <ForecastDisplay
+              data={this.state.forecastData}
+              handleClick={this.forecastTypeBtnClick}
+              forecastType={this.state.forecastType} />
             <Input
               userInput={this.state.userInput}
               handleSubmit={this.onSubmit}
