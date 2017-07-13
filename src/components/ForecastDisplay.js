@@ -3,21 +3,19 @@ import CurrentForecast from './CurrentForecast'
 import FiveDayForecast from './FiveDayForecast'
 import { StyleSheet, css } from 'aphrodite'
 
-const ForecastDisplay = (props) => {
-  return (
-    <div className={css(styles.wrapper)}>
-      {props.data
-        ? (props.forecastType === 'current'
-            ? <CurrentForecast data={props.data} />
-            : <FiveDayForecast data={props.data} />)
-        : (<div>No city selected</div>)
-      }
-      <button onClick={props.handleClick} name='back'>
-        Back
-      </button>
-    </div>
-  )
-}
+const ForecastDisplay = (props) => (
+  <div className={css(styles.wrapper)}>
+    {props.data
+      ? (props.forecastType === 'current'
+          ? <CurrentForecast data={props.data} />
+          : <FiveDayForecast data={props.data} />)
+      : (<div>No city selected</div>)
+    }
+    <button onClick={props.handleClick} name='back'>
+      Back
+    </button>
+  </div>
+)
 
 export default ForecastDisplay
 
