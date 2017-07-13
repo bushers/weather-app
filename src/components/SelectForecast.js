@@ -23,9 +23,22 @@ const styles = StyleSheet.create({
     padding: '1em'
   },
   btn: {
-    padding: '.5em',
+    padding: '1em',
     margin: '0 1em',
     borderRadius: '5px',
-    fontSize: '1.2em'
+    fontSize: '1.3em',
+    color: '#fff',
+    border: 'none',
+    backgroundColor: '#6496c8',
+    boxShadow: '0 4px #27496d',
+    ':hover': {
+      backgroundColor: '#417cb8',
+      cursor: 'pointer'
+    },
+    ':active': {
+      backgroundColor: '#417cb8',
+      boxShadow: '0 0 #27496d',
+      transform: 'translateY(5px)'
+    }
   }
 })

@@ -11,7 +11,10 @@ const ForecastDisplay = (props) => (
           : <FiveDayForecast data={props.data} />)
       : (<div>No city selected</div>)
     }
-    <button onClick={props.handleClick} name='back'>
+    <button
+      className={css(styles.btn)}
+      onClick={props.handleClick}
+      name='back'>
       Back
     </button>
   </div>
@@ -20,5 +23,20 @@ const ForecastDisplay = (props) => (
 export default ForecastDisplay
 
 const styles = StyleSheet.create({
-  padding: '1em 0'
+  wrapper: {
+    padding: '1em 0'
+  },
+  btn: {
+    padding: '0.5em 1em',
+    margin: '0 1em',
+    borderRadius: '4px',
+    color: '#fff',
+    border: 'none',
+    backgroundColor: '#6496c8',
+    boxShadow: '0 2px #27496d',
+    ':hover': {
+      backgroundColor: '#417cb8',
+      cursor: 'pointer'
+    }
+  }
 })
