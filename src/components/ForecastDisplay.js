@@ -9,14 +9,8 @@ const ForecastDisplay = (props) => (
       ? (props.forecastType === 'current'
           ? <CurrentForecast data={props.data} />
           : <FiveDayForecast data={props.data} />)
-      : (<div>No city selected</div>)
+      : (<h3 className={css(styles.text)}>Search for your selected forecast by entering a city below</h3>)
     }
-    <button
-      className={css(styles.btn)}
-      onClick={props.handleClick}
-      name='back'>
-      Back
-    </button>
   </div>
 )
 
@@ -26,17 +20,7 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: '1em 0'
   },
-  btn: {
-    padding: '0.5em 1em',
-    margin: '0 1em',
-    borderRadius: '4px',
-    color: '#fff',
-    border: 'none',
-    backgroundColor: '#6496c8',
-    boxShadow: '0 2px #27496d',
-    ':hover': {
-      backgroundColor: '#417cb8',
-      cursor: 'pointer'
-    }
+  text: {
+    margin: '1em 0'
   }
 })

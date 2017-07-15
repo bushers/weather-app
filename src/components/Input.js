@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite'
 
 const Input = (props) => (
   <div>
-    <form onSubmit={props.handleSubmit}>
+    <form className={css(styles.formWrapper)} onSubmit={props.handleSubmit}>
       <input
         className={css(styles.textBox)}
         type='text'
@@ -14,12 +14,21 @@ const Input = (props) => (
         type='submit'
         value='Enter' />
     </form>
+    <button
+      className={css(styles.btn)}
+      onClick={props.goBack}
+      name='back'>
+      Go Back
+    </button>
   </div>
 )
 
 export default Input
 
 const styles = StyleSheet.create({
+  formWrapper: {
+    margin: '1em 0'
+  },
   textBox: {
     borderRadius: '5px',
     padding: '0.5em 1em'

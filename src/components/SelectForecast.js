@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite'
 
 const SelectForecast = (props) => (
   <div className={css(styles.wrapper)}>
+    <h3 className={css(styles.title)}>Select your forecast type</h3>
     <button
       className={css(styles.btn)}
       onClick={props.handleClick}
@@ -22,11 +23,15 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: '1em'
   },
+  title: {
+    margin: '1em 0 2em 0'
+  },
   btn: {
-    padding: '1em',
-    margin: '0 1em',
+    width: '180px',
+    padding: '.75em',
+    margin: '0.5em 1em',
     borderRadius: '5px',
-    fontSize: '1.3em',
+    fontSize: '1.2em',
     color: '#fff',
     border: 'none',
     backgroundColor: '#6496c8',

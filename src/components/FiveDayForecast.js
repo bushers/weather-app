@@ -7,14 +7,15 @@ const FiveDayForecast = (props) => {
   })
 
   return (
-    <div className={css(styles.wrapper)}>
+    <div>
       {forecastDay.map(cur => (
-        <div key={cur.dt}>
-          <p>The forecast for {props.data.city.name} on {cur.dt_txt.substring(0, 11)} is:</p>
+        <div className={css(styles.forecast)} key={cur.dt}>
+          <h3>The forecast for {props.data.city.name} on {cur.dt_txt.substring(0, 11)} is:</h3>
           <img src={`http://openweathermap.org/img/w/${cur.weather[0].icon}.png`} />
           <h3>{cur.weather[0].main}</h3>
-          <p>{cur.weather[0].description}</p>
+          <p>Description: "{cur.weather[0].description}"</p>
           <p>Temperature {(cur.main.temp - 273.15).toFixed(2)} C, {((cur.main.temp - 273.15) * 9 / 5 + 32).toFixed(2)} F</p>
+          <hr className={css(styles.hr)} />
         </div>
       ))}
     </div>
@@ -24,5 +25,10 @@ const FiveDayForecast = (props) => {
 export default FiveDayForecast
 
 const styles = StyleSheet.create({
-  padding: '1em 0'
+  forecast: {
+    margin: '3em'
+  },
+  hr: {
+    marginTop: '2em'
+  }
 })

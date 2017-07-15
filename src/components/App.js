@@ -52,7 +52,7 @@ class App extends Component {
   render () {
     return (
       <div className={css(styles.wrapper)}>
-        <h1 className={css(styles.title)}>Weather App</h1>
+        <h1 className={css(styles.title)}>Weather Forecast App</h1>
         {this.state.forecastType ? (
           <div>
             <ForecastDisplay
@@ -62,7 +62,8 @@ class App extends Component {
             <Input
               userInput={this.state.userInput}
               handleSubmit={this.onSubmit}
-              onChange={this.onChange} />
+              onChange={this.onChange}
+              goBack={this.forecastTypeBtnClick} />
           </div>
         ) : (
           <SelectForecast handleClick={this.forecastTypeBtnClick} />
@@ -76,14 +77,20 @@ export default App
 
 const styles = StyleSheet.create({
   wrapper: {
+    backgroundColor: '#fff',
     maxWidth: '580px',
     margin: '2em auto',
-    padding: '2em 1em',
+    padding: '0 0 2em 0',
     textAlign: 'center',
-    border: '1px solid black'
+    borderRadius: '5px',
+    boxShadow: '0 2px 2px #000'
   },
   title: {
-    fontSize: '2em',
+    backgroundColor: '#417cb8',
+    padding: '0.5em 0',
+    borderRadius: '5px',
+    fontSize: '1.8em',
+    boxShadow: '0 4px #27496d',
     fontWeight: 'bold'
   }
 })

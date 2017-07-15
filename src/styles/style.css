@@ -44,3 +44,5 @@ hr { margin-top: 1rem; margin-bottom: 1rem; border: 0; border-top: 1px solid rgb
 .container:after { content: ''; display: table; clear: both; }
 .no-scrollbar::-webkit-scrollbar,
 .leaflet-control-attribution a { display: none; }
+body { font-size: 17px; background-color: #eee; }
+h3 { font-size: 1.2em; }
