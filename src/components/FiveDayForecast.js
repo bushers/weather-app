@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StyleSheet, css } from 'aphrodite'
 
 const FiveDayForecast = (props) => {
@@ -23,6 +24,15 @@ const FiveDayForecast = (props) => {
 }
 
 export default FiveDayForecast
+
+FiveDayForecast.propTypes = {
+  data: PropTypes.shape({
+    city: PropTypes.shape({
+      name: PropTypes.string.isRequired
+    }),
+    list: PropTypes.arrayOf(PropTypes.object.isRequired)
+  })
+}
 
 const styles = StyleSheet.create({
   forecast: {

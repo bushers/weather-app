@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StyleSheet, css } from 'aphrodite'
 
 const SelectForecast = (props) => (
@@ -18,6 +19,10 @@ const SelectForecast = (props) => (
 )
 
 export default SelectForecast
+
+SelectForecast.propTypes = {
+  handleClick: PropTypes.func.isRequired
+}
 
 const styles = StyleSheet.create({
   wrapper: {

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StyleSheet, css } from 'aphrodite'
 
 const Input = (props) => (
@@ -24,6 +25,12 @@ const Input = (props) => (
 )
 
 export default Input
+
+Input.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  goBack: PropTypes.func.isRequired
+}
 
 const styles = StyleSheet.create({
   formWrapper: {
