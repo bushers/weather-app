@@ -46,3 +46,33 @@ hr { margin-top: 1rem; margin-bottom: 1rem; border: 0; border-top: 1px solid rgb
 .leaflet-control-attribution a { display: none; }
 body { font-size: 17px; background-color: #eee; }
 h3 { font-size: 1.2em; }
+
+/******************************
+  Transitions
+*******************************/
+
+.fade-in-appear {
+  opacity: 0.01;
+}
+.fade-in-appear.fade-in-appear-active {
+  opacity: 1;
+  transition: all .5s ease-in;
+}
+.fade-in-down-appear {
+  opacity: 0.01;
+  transform: translateY(-100%);
+}
+.fade-in-down-appear.fade-in-down-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .5s ease-in;
+}
+.fade-in-up-appear {
+  opacity: 0.01;
+  transform: translateY(100%);
+}
+.fade-in-up-appear.fade-in-up-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .5s ease-in;
+}

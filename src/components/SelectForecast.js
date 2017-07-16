@@ -1,20 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransitionGroup } from 'react-transition-group'
 import { StyleSheet, css } from 'aphrodite'
 
 const SelectForecast = (props) => (
   <div className={css(styles.wrapper)}>
-    <h3 className={css(styles.title)}>Select your forecast type</h3>
-    <button
-      className={css(styles.btn)}
-      onClick={props.handleClick}
-      name='current'>Current Forecast
-    </button>
-    <button
-      className={css(styles.btn)}
-      onClick={props.handleClick}
-      name='5day'>5 Day Forecast
-    </button>
+    <CSSTransitionGroup
+      transitionName='fade-in-down'
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnterTimeout={100}
+      transitionLeaveTimeout={100}>
+      <h3 className={css(styles.title)}>Select your forecast type</h3>
+    </CSSTransitionGroup>
+    <CSSTransitionGroup
+      transitionName='fade-in-up'
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnterTimeout={100}
+      transitionLeaveTimeout={100}>
+      <button
+        className={css(styles.btn)}
+        onClick={props.handleClick}
+        name='current'>Current Forecast
+      </button>
+    </CSSTransitionGroup>
+    <CSSTransitionGroup
+      transitionName='fade-in-up'
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnterTimeout={100}
+      transitionLeaveTimeout={100}>
+      <button
+        className={css(styles.btn)}
+        onClick={props.handleClick}
+        name='5day'>5 Day Forecast
+      </button>
+    </CSSTransitionGroup>
   </div>
 )
 
