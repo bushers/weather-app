@@ -13,7 +13,7 @@ const ForecastDisplay = (props) => (
       : (
         <CSSTransitionGroup
           transitionName='fade-in-down'
-          transitionAppear={true}
+          transitionAppear
           transitionAppearTimeout={500}
           transitionEnterTimeout={100}
           transitionLeaveTimeout={100}>

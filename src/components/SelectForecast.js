@@ -7,7 +7,7 @@ const SelectForecast = (props) => (
   <div className={css(styles.wrapper)}>
     <CSSTransitionGroup
       transitionName='fade-in-down'
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={500}
       transitionEnterTimeout={100}
       transitionLeaveTimeout={100}>
@@ -15,7 +15,7 @@ const SelectForecast = (props) => (
     </CSSTransitionGroup>
     <CSSTransitionGroup
       transitionName='fade-in-up'
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={500}
       transitionEnterTimeout={100}
       transitionLeaveTimeout={100}>
@@ -27,7 +27,7 @@ const SelectForecast = (props) => (
     </CSSTransitionGroup>
     <CSSTransitionGroup
       transitionName='fade-in-up'
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={500}
       transitionEnterTimeout={100}
       transitionLeaveTimeout={100}>

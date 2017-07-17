@@ -6,7 +6,7 @@ import { StyleSheet, css } from 'aphrodite'
 const CurrentForecast = (props) => (
   <CSSTransitionGroup
     transitionName='fade-in'
-    transitionAppear={true}
+    transitionAppear
     transitionAppearTimeout={500}
     transitionEnterTimeout={100}
     transitionLeaveTimeout={100}>

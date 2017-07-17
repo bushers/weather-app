@@ -11,7 +11,7 @@ const FiveDayForecast = (props) => {
   return (
     <CSSTransitionGroup
       transitionName='fade-in'
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={500}
       transitionEnterTimeout={100}
       transitionLeaveTimeout={100}>
