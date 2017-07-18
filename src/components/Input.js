@@ -37,10 +37,12 @@ const styles = StyleSheet.create({
     margin: '1em 0'
   },
   textBox: {
-    padding: '0.4em 1em',
+    padding: '0.5em 1em',
+    marginBottom: '0.5em',
     backgroundColor: '#efefef'
   },
   btn: {
+    width: 95,
     padding: '0.5em 1em',
     margin: '0 1em',
     color: '#fff',
