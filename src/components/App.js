@@ -15,7 +15,8 @@ class App extends Component {
     if (this.state.forecastType) {
       this.setState({
         forecastType: null,
-        forecastData: null
+        forecastData: null,
+        userInput: ''
       })
     } else {
       this.setState({ forecastType: e.target.name })
