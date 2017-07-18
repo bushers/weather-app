@@ -25,6 +25,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        options: {
+          cacheDirectory: true
+        },
         exclude: /node_modules/
       },
       {
