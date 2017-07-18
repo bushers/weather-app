@@ -37,20 +37,22 @@ const styles = StyleSheet.create({
     margin: '1em 0'
   },
   textBox: {
-    borderRadius: '5px',
-    padding: '0.5em 1em'
+    padding: '0.4em 1em',
+    backgroundColor: '#efefef'
   },
   btn: {
     padding: '0.5em 1em',
     margin: '0 1em',
-    borderRadius: '4px',
     color: '#fff',
     border: 'none',
-    backgroundColor: '#6496c8',
-    boxShadow: '0 2px #27496d',
+    backgroundColor: '#FF665E',
     ':hover': {
-      backgroundColor: '#417cb8',
+      backgroundColor: '#e64d45',
       cursor: 'pointer'
+    },
+    ':active': {
+      backgroundColor: '#cc332b',
+      transform: 'translateY(2px)'
     }
   }
 })

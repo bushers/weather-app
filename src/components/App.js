@@ -79,18 +79,18 @@ const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: '#fff',
     maxWidth: '580px',
-    margin: '2em auto',
-    padding: '0 0 2em 0',
+    margin: 'auto',
+    padding: '0 0 1.5em 0',
     textAlign: 'center',
     borderRadius: '5px',
     boxShadow: '0 2px 2px #000'
   },
   title: {
-    backgroundColor: '#417cb8',
+    backgroundColor: '#3E3E3E',
+    color: '#fff',
+    borderRadius: '5px 5px 0 0',
     padding: '0.5em 0',
-    borderRadius: '5px',
     fontSize: '1.8em',
-    boxShadow: '0 4px #27496d',
-    fontWeight: 'bold'
+    fontWeight: 'normal'
   }
 })

@@ -30,7 +30,7 @@ export default ForecastDisplay
 
 const styles = StyleSheet.create({
   wrapper: {
-    padding: '1em 0'
+    padding: '1em'
   },
   text: {
     margin: '1em 0'

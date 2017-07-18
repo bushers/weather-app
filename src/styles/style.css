@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
 *, *:after, *:before { box-sizing: border-box; }
 html, body, div, article, aside, canvas, figure, figcaption, footer, header,
 main, nav, section, audio, video h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
@@ -44,7 +45,7 @@ hr { margin-top: 1rem; margin-bottom: 1rem; border: 0; border-top: 1px solid rgb
 .container:after { content: ''; display: table; clear: both; }
 .no-scrollbar::-webkit-scrollbar,
 .leaflet-control-attribution a { display: none; }
-body { font-size: 17px; background-color: #eee; }
+body { font-size: 17px; font-family: 'Lato', sans-serif; background-color: #eee; padding: 1em; }
 h3 { font-size: 1.2em; }
 
 /******************************

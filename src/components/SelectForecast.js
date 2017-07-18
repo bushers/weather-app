@@ -54,23 +54,20 @@ const styles = StyleSheet.create({
     margin: '1em 0 2em 0'
   },
   btn: {
-    width: '180px',
+    width: '185px',
     padding: '.75em',
     margin: '0.5em 1em',
-    borderRadius: '5px',
     fontSize: '1.2em',
     color: '#fff',
     border: 'none',
-    backgroundColor: '#6496c8',
-    boxShadow: '0 4px #27496d',
+    backgroundColor: '#FF665E',
     ':hover': {
-      backgroundColor: '#417cb8',
+      backgroundColor: '#e64d45',
       cursor: 'pointer'
     },
     ':active': {
-      backgroundColor: '#417cb8',
-      boxShadow: '0 0 #27496d',
-      transform: 'translateY(5px)'
+      backgroundColor: '#cc332b',
+      transform: 'translateY(2px)'
     }
   }
 })
